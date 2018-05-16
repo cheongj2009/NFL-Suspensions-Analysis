@@ -18,5 +18,18 @@ for row in nfl_suspensions:
         years[row_year] = years[row_year] + 1
     else:
         years[row_year] = 1
-        
+
+# Display years
 print(years)
+
+# Use list comprehension and set method to extract unique teams
+unique_teams = [row[1] for row in nfl_suspensions]
+unique_teams = set(unique_teams)
+
+# Use list comprehension and set method to extract unique number of games
+unique_games = [row[2] for row in nfl_suspensions]
+unique_games = set(unique_games)
+
+# Display unique_teams and unique_games
+print(unique_teams)
+print(unique_games)
